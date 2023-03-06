@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  django:
+    build: .
+    container_name: menu-app
+    volumes:
+      - .:/opt/project
+    command: python menu-app/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+

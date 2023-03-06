@@ -1,0 +1,11 @@
+{% load user_tags %}
+
+{% for item in menu %}
+  <details {% if item.lvl <= lvl %} open {% endif %}>
+    <summary>
+    </summary>
+  <div class="menu_item">
+        <a href="{{ item.url }}">{{ item }}</a>
+      </div>
+  </details>
+{% endfor %}
